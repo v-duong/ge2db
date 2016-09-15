@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
+import Helmet from 'react-helmet';
 
 // Import Components
 import MonsterList from '../../components/MonsterList';
@@ -19,6 +20,7 @@ class MonsterListPage extends Component {
   render() {
     return (
       <div>
+        <Helmet title="Monsters" />
         <MonsterList monsters={this.props.monsters} />
       </div>
     );

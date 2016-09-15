@@ -36,15 +36,9 @@ export class App extends Component {
   }
 }
 
-
-App.propTypes = {
-  dispatch: PropTypes.func.isRequired,
-};
-
 // Retrieve data from store as props
 function mapStateToProps(store) {
-  return {
-  };
+  return {};
 }
 
 export default connect(mapStateToProps)(App);

@@ -1,18 +1,34 @@
 import React, { PropTypes } from 'react';
 
-import MonsterListItem from './MonsterListItem/MonsterListItem'
+import MonsterListTable from './MonsterListTable/MonsterListTable'
 
 function MonsterList(props) {
+  var small = [], mid = [], large = [];
+  props.monsters.map(monster => {
+    if (monster.class == 'Small')
+      small.push(monster)
+    else if (monster.class == 'Medium')
+      mid.push(monster)
+    else
+      large.push(monster)
+  });
   return (
     <div className="listView">
-      {
-        props.monsters.map(monster => (
-          <MonsterListItem
-            monster={monster}
-            key={monster.name}
+          <MonsterListTable
+            monsters={small}
+            class="Small"
+            key="small"
           />
-        ))
-      }
+          <MonsterListTable
+            monsters={mid}
+            class="Mid"
+            key="mid"
+          />
+          <MonsterListTable
+            monsters={large}
+            class="Large"
+            key="large"
+          />
     </div>
   );
 }

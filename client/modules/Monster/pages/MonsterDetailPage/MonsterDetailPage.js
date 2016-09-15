@@ -16,7 +16,6 @@ class MonsterDetailPage extends Component{
       <div>
         <Helmet title={this.props.params.name} />
         <h1>{this.props.monster.name}</h1>
-        <p>Class: {this.props.monster.class}</p>
         <MonsterDetailTable monster={this.props.monster}/>
       </div>
     );
