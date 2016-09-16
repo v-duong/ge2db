@@ -20,7 +20,7 @@ function MonsterListTable(props) {
       </thead>
       <tbody>
         {sub.map(monsters =>(
-          <MonsterListTableRow monsters={monsters}/>
+          <MonsterListTableRow monsters={monsters} key={monsters[0].name}/>
         ))
         }
       </tbody>
