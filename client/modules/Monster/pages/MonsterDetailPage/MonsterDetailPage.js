@@ -12,13 +12,21 @@ import { getMonster } from '../../MonsterReducer';
 
 class MonsterDetailPage extends Component{
   render() {
-    return (
-      <div>
-        <Helmet title={this.props.params.name} />
-        <h1>{this.props.monster.name}</h1>
-        <MonsterDetailTable monster={this.props.monster}/>
-      </div>
-    );
+    if (this.props.monster)
+      return (
+        <div>
+          <Helmet title={this.props.params.name} />
+          <h1>{this.props.monster.name}</h1>
+          <MonsterDetailTable monster={this.props.monster}/>
+        </div>
+      );
+    else
+      return (
+        <div>
+          <Helmet title="Error"/>
+          <p>{this.props.params.name} not found.</p>
+        </div>
+      )
   }
 }
 

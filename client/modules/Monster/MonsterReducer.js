@@ -22,11 +22,14 @@ const MonsterReducer = (state = initialState, action) => {
 
 /* Selectors */
 
-// Get all posts
 export const getMonsters = state => state.monsters.data
 
-// Get post by cuid
-export const getMonster = (state, name) => state.monsters.data.filter(monster => monster.name === name)[0];
+export const getMonster = (state, name) => state.monsters.data.filter(monster => {
+  if (monster != null)
+    return monster.name === name
+  else
+    return {}
+})[0];
 
 // Export Reducer
 export default MonsterReducer;

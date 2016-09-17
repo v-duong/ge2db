@@ -19,7 +19,6 @@ function MonsterDropTable(props) {
   else if(props.tier == 6)
     name += "14-15"
   if(props.items){
-    var item = props.items.split(", ")
     return (
       <table className={styles.dropTable}>
         <thead>
@@ -29,9 +28,10 @@ function MonsterDropTable(props) {
         </thead>
         <tbody>
           {
-            item.map(i => (
-              <tr key={i}><td>{i}</td></tr>
-            )
+            props.items.map(i => {
+              var s = "/item/" + i;
+              return <tr key={i}><td><Link to={s}>{i}</Link></td></tr>
+            }
           )
           }
         </tbody>

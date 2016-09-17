@@ -18,6 +18,7 @@ if (process.env.NODE_ENV !== 'production') {
   // Require async routes only in development for react-hot-reloader to work.
   require('./modules/Monster/pages/MonsterListPage/MonsterListPage');
   require('./modules/Monster/pages/MonsterDetailPage/MonsterDetailPage');
+  require('./modules/Item/pages/ItemDetail');
 }
 
 // react-router setup with code-splitting
@@ -40,5 +41,13 @@ export default (
           });
         }}
       />
+      <Route
+        path="/item/:name"
+        getComponent={(nextState, cb) => {
+          require.ensure([], require => {
+             cb(null, require('./modules/Item/pages/ItemDetail.js').default);
+           });
+         }}
+       />
   </Route>
 );
