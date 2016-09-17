@@ -28,7 +28,7 @@ function MonsterDetailTableHit(props) {
 
 MonsterDetailTableHit.propTypes = {
   part: PropTypes.shape({
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired
   }).isRequired,
 };
 
