@@ -1,6 +1,7 @@
 import { ADD_ITEM } from './ItemActions';
 
 // Initial State
+//const initialState = { data: {'name': 'Imploder', 'drop': ['Vajra']} };
 const initialState = { data: [] };
 
 const ItemReducer = (state = initialState, action) => {
@@ -16,7 +17,13 @@ const ItemReducer = (state = initialState, action) => {
 };
 
 
-export const getItem = state => state.item.data
+export const getItem = (state, name) => {
+  if (state.item.data)
+    if (state.item.data.name === name)
+      return state.item.data
+
+  return {}
+}
 
 // Export Reducer
 export default ItemReducer;

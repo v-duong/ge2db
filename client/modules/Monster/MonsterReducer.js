@@ -24,12 +24,15 @@ const MonsterReducer = (state = initialState, action) => {
 
 export const getMonsters = state => state.monsters.data
 
+//export const getMonster = (state, name) => state.monster.data
+
 export const getMonster = (state, name) => state.monsters.data.filter(monster => {
   if (monster != null)
     return monster.name === name
   else
     return {}
 })[0];
+
 
 // Export Reducer
 export default MonsterReducer;

@@ -4,6 +4,9 @@ import { Link } from 'react-router';
 
 import styles from './Header.css';
 
+import Search from './Search'
+
+var libraries = require('../../../../data/index.json')
 
 export function Header(props, context) {
   return (
@@ -15,6 +18,7 @@ export function Header(props, context) {
           <p className={styles.navlink}>
             <Link to="/monster/" >monsters</Link>
           </p>
+          <Search items={libraries}/>
       </div>
     </div>
   );

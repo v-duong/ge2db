@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
 
+import ItemTable from '../components/ItemTable'
+
 // Import Actions
 import { fetchItem } from '../ItemActions';
 
@@ -10,29 +12,24 @@ import { fetchItem } from '../ItemActions';
 import { getItem } from '../ItemReducer';
 
 class ItemDetail extends Component{
+  componentDidMount() {
+    this.props.dispatch(fetchItem(this.props.params.name));
+  }
+  componentWillReceiveProps(nextProps){
+    if (nextProps.params.name !== this.props.params.name) {
+      nextProps.dispatch(fetchItem(nextProps.params.name));
+    }
+  }
   render() {
-    if (this.props.item)
+    if (this.props.item.drop){
       return (
         <div>
           <Helmet title={this.props.params.name} />
-          <h1>{this.props.item.name}</h1>
-          <table>
-            <thead>
-              <tr><th>Drops From</th></tr>
-            </thead>
-            <tbody>
-            {
-              this.props.item.drop.map(monster => {
-                var str = "/monster/" + monster
-                return <tr key={monster}><td><Link to={str} >{monster}</Link></td></tr>
-              }
-            )
-            }
-          </tbody>
-          </table>
+          <h1>{this.props.params.name}</h1>
+          <ItemTable item={this.props.item}/>
         </div>
       );
-    else {
+  }  else {
       return (
         <div>
           <Helmet title="Error" />
@@ -51,14 +48,14 @@ ItemDetail.need = [params => {
 // Retrieve data from store as props
 function mapStateToProps(state, props) {
   return {
-    item: getItem(state)
+    item: getItem(state, props.params.name)
   };
 }
-
+/*
 ItemDetail.propTypes = {
   item: PropTypes.shape({
     name: PropTypes.string.isRequired
   }).isRequired,
 };
-
+*/
 export default connect(mapStateToProps)(ItemDetail);

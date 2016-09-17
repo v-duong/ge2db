@@ -18,7 +18,7 @@ export function addMonsters(monsters) {
 }
 
 export function fetchMonsters() {
-  return (dispatch, getState) => {
+  return (dispatch) => {
     return callApi('monster').then(res => {
       dispatch(addMonsters(res.monsters));
     });
@@ -26,7 +26,7 @@ export function fetchMonsters() {
 }
 
 export function fetchMonster(name) {
-  return (dispatch, getState) => {
+  return (dispatch) => {
     return callApi(`monster/${name}`).then(res => dispatch(addMonster(res.monster)));
   };
 }
