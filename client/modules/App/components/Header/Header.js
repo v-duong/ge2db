@@ -1,16 +1,21 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 
-export function Header(props, context) {
 
+import styles from './Header.css';
+
+
+export function Header(props, context) {
   return (
-    <div>
-          <h1>
-            <Link to="/" >HEADER</Link>
+    <div className={styles.header}>
+      <div className={styles.navbar}>
+          <h1 className={styles['site-title']}>
+            <Link to="/" >GE2DB</Link>
           </h1>
-          <h1>
+          <p className={styles.navlink}>
             <Link to="/monster/" >monsters</Link>
-          </h1>
+          </p>
+      </div>
     </div>
   );
 }

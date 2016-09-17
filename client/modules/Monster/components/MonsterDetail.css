@@ -1,0 +1,16 @@
+.hitTable {
+  width: 50%;
+  margin: 10px;
+}
+
+.hitTable td{
+  margin: auto;
+  text-align: center;
+  padding: 5px;
+}
+
+.dropTable {
+  display: inline-table;
+  width: 33%;
+  margin:15px auto;
+}

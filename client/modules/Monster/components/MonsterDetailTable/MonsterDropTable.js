@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 
+import styles from '../MonsterDetail.css'
+
 function MonsterDropTable(props) {
   //TODO: do this with a better way?
   var name = "Difficulty ";
@@ -19,7 +21,7 @@ function MonsterDropTable(props) {
   if(props.items){
     var item = props.items.split(", ")
     return (
-      <table>
+      <table className={styles.dropTable}>
         <thead>
           <tr>
            <th>{name}</th>
@@ -38,7 +40,7 @@ function MonsterDropTable(props) {
   }
   else
     return (
-      <table>
+      <table className={styles.dropTable}>
         <thead>
           <tr>
            <th>{name}</th>

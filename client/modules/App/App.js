@@ -7,6 +7,8 @@ import DevTools from './components/DevTools';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
+import styles from './App.css';
+
 export class App extends Component {
   constructor(props) {
     super(props);
@@ -20,17 +22,17 @@ export class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.container}>
         {this.state.isMounted && !window.devToolsExtension && process.env.NODE_ENV === 'development' && <DevTools />}
           <Helmet
             title="Home"
             titleTemplate="%s - GE2DB"
           />
           <Header/>
-            <div>
+            <div className={styles.app}>
                 {this.props.children}
-              </div>
-          <Footer />
+            </div>
+          <Footer/>
       </div>
     );
   }

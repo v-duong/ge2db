@@ -1,0 +1,16 @@
+.listTable {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.listTableHead {
+  background-color: #eee;
+}
+
+.listTableBody{
+
+}
+
+.listTableCell{
+  padding: 3px;
+}

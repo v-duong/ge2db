@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 
+import styles from '../MonsterDetail.css'
+
 function MonsterDetailTableHit(props) {
   if (props.part.damagezone)
     return (

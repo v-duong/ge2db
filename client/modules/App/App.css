@@ -1,0 +1,12 @@
+.container{
+  height: 100%;
+}
+
+.app {
+  max-width: 980px;
+  margin: auto;
+  padding-top: 14px;
+  overflow: auto;
+  min-height: 100%;
+  margin-bottom: -15px;
+}

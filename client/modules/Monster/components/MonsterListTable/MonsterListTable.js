@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 
 import MonsterListTableRow from './MonsterListTableRow'
 
+import styles from './MonsterListTable.css'
 
 function MonsterListTable(props) {
   //TODO: find better solution for table
@@ -12,13 +13,13 @@ function MonsterListTable(props) {
     sub.push(m.splice(0,6))
   }
   return (
-    <table>
-      <thead>
+    <table className={styles.listTable}>
+      <thead className={styles.listTableHead}>
         <tr>
-          <th colSpan="6">{props.class}-sized</th>
+          <th colSpan="6" className={styles.listTableCell}>{props.class}-sized</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody className={styles.listTableBody}>
         {sub.map(monsters =>(
           <MonsterListTableRow monsters={monsters} key={monsters[0].name}/>
         ))

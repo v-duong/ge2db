@@ -3,12 +3,14 @@ import React, { PropTypes } from 'react';
 import MonsterDetailTableHit from './MonsterDetailTable/MonsterDetailTableHit'
 import MonsterDetailTableDrop from './MonsterDetailTable/MonsterDetailTableDrop'
 
+import styles from './MonsterDetail.css'
+
 function MonsterDetailTable(props) {
   return (
     <div className="listView">
-      <table>
+      <table className={styles.hitTable}>
         <thead>
-          <tr>
+          <tr >
             <th></th>
             <th colSpan="2">Bullet</th>
             <th colSpan="3">Melee</th>

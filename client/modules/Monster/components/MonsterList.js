@@ -13,7 +13,7 @@ function MonsterList(props) {
       large.push(monster)
   });
   return (
-    <div className="listView">
+    <div>
           <MonsterListTable
             monsters={small}
             class="Small"
