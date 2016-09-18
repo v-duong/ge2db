@@ -23,7 +23,16 @@
   text-transform: capitalize;
 }
 
+.search:focus + .results {
+  display: block;
+ }
+
+ .results:hover {
+   display: block;
+  }
+
 .results {
+  display:none;
   position: absolute;
  left: 0;
  right: 0;
@@ -33,8 +42,10 @@
  width: 10%;
  background-color: #eee;
 }
+
 .results li {
   display: block;
+
 }
 .results li:first-child:before, .results li:first-child:after {
     display: block;
@@ -46,7 +57,7 @@
     margin-left: -5px;
     border: 5px outset transparent;
 }
-.results li:first-child:hover:before, .search .results li:first-child:hover:after { display: none }
+
 .results a {
     display: block;
     position: relative;

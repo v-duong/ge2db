@@ -12,4 +12,17 @@
 
 html,body{
 	height:100%;
+	font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+a:link, a:visited {
+	color: rgb(25, 124, 212);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
 }

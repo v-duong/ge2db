@@ -40,7 +40,7 @@ class Search extends Component{
        var t = this;
        return (
          <div>
-            <input type="text" value={this.state.searchString} onChange={this.handleChange} placeholder="Search"/>
+            <input className={styles.search} type="text" value={this.state.searchString} onChange={this.handleChange} placeholder="Search"/>
             <ul className={styles.results}>
               {result.map(function(i) {
                   return <li key={i.name}><Link to={"/"+i.type+"/"+i.name} onClick={t.handleClick}>{i.name}</Link></li>;
