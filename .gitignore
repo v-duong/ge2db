@@ -3,4 +3,4 @@ npm-debug.log
 public/*
 build
 dist
-client/data
+client/assets

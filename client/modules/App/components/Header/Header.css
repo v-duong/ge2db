@@ -1,26 +1,89 @@
-.header {
-  background-color: #eee;
-  border-bottom: 1px solid #ccc;
+.navbar {
+   margin: auto;
+   text-align: center;
+   background-color: #E0E0E0;
+   height:60px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+}
+.navbar-div {
+   margin: auto;
+   height: inherit;
+   line-height: 60px;
+}
+.navbar a{
+  color: #424242;
+  font-weight: 300;
 }
 
-.navbar {
-   max-width: 980px;
-   margin: auto;
-   overflow: auto;
-   padding-bottom: 0.5em;
-   padding-top: 0.5em;
-   text-align: center;
+.navlist{
+  list-style: none;
+}
+
+.navlistitem{
+  float:left;
+  margin-left: 1em;
+  padding-left:1em;
+  padding-right:1em;
+  position: relative;
+  line-height: 60px;
+}
+
+.navlistitemlink {
+  display: inline-block;
+  position: relative;
+}
+
+.navlistitemlink:after {
+  content: '';
+	display: block;
+	margin: auto;
+	height: 2px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+
+.navlistitemlink:hover:after {
+	width: 100%;
+	background: #424242;
 }
 
 .site-title {
-  font-weight: 300;
+  font-weight: 600;
   font-size: 24px;
   float: left;
+  margin-left: 2em;
 }
+
+.navlistitem p, .site-title{
+  line-height: inherit;
+}
+
+
 
 .navlink {
   font-size: 24px;
   text-transform: capitalize;
+}
+
+.search {
+  background-color: rgba(255,255,255,0);
+  border: none;
+  line-height: 30px;
+  outline:none;
+  border-bottom: 1px solid #424242;
+  color: #424242;
+  font-size: 15px;
+  font-family: 'Roboto';
+  min-width: 15em;
+}
+
+.search:focus {
+  border-bottom-width: 2px;
+}
+
+::-webkit-input-placeholder{
+  color: rgba(33,33,33,0.6);
 }
 
 .search:focus + .results {
@@ -34,19 +97,24 @@
 .results {
   display:none;
   position: absolute;
- left: 0;
- right: 0;
- z-index: 10;
- padding: 0;
- margin: 0 auto;
- width: 10%;
- background-color: #eee;
+   left: 0;
+   right: 0;
+   z-index: 10;
+   padding: 0;
+   top: 45px;
+   margin: 0 auto;
+   background-color: #fff;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 
 .results li {
   display: block;
-
 }
+
+.results li:hover{
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
 .results li:first-child:before, .results li:first-child:after {
     display: block;
     content: '';
@@ -58,10 +126,11 @@
     border: 5px outset transparent;
 }
 
-.results a {
+.results a, .results a:visited, .results a:link {
     display: block;
     position: relative;
     margin: 0 auto;
     padding: 0.5em;
-    border-bottom: solid 1px black;
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: 400;
 }

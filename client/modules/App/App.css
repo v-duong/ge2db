@@ -10,3 +10,7 @@
   min-height: 100%;
   margin-bottom: -15px;
 }
+
+.app a:visited, a:link {
+  color: #0288D1;
+}

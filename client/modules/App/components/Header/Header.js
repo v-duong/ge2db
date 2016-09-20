@@ -6,21 +6,26 @@ import styles from './Header.css';
 
 import Search from './Search'
 
-var libraries = require('../../../../data/index.json')
+var index = require('../../../../assets/index.json')
 
 export function Header(props, context) {
   return (
-    <div className={styles.header}>
-      <div className={styles.navbar}>
+    <nav className={styles.navbar}>
+      <div className={styles['navbar-div']}>
           <h1 className={styles['site-title']}>
             <Link to="/" >GE2DB</Link>
           </h1>
-          <p className={styles.navlink}>
-            <Link to="/monster/" >monsters</Link>
-          </p>
-          <Search items={libraries}/>
+          <ul className={styles.navlist}>
+            <li className={styles.navlistitem}>
+            <p className={styles.navlink}>
+              <Link to="/monster/" className={styles.navlistitemlink}>monsters</Link>
+            </p>
+            </li>
+              <Search items={index}/>
+          </ul>
+
       </div>
-    </div>
+    </nav>
   );
 }
 

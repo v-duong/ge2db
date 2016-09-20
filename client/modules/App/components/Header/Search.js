@@ -1,7 +1,7 @@
 import React, { PropTypes , Component} from 'react';
 import { Link } from 'react-router';
 
-import Fuse from '../../../../data/fuse.min.js'
+import Fuse from '../../../../assets/fuse.min.js'
 
 import styles from './Header.css';
 
@@ -35,18 +35,18 @@ class Search extends Component{
 
        if (searchString.length > 0) {
          result = fuse.search(searchString);
-         result = result.slice(0,6);
+         result = result.slice(0,8);
        }
        var t = this;
        return (
-         <div>
+         <li className={styles.navlistitem}>
             <input className={styles.search} type="text" value={this.state.searchString} onChange={this.handleChange} placeholder="Search"/>
             <ul className={styles.results}>
               {result.map(function(i) {
                   return <li key={i.name}><Link to={"/"+i.type+"/"+i.name} onClick={t.handleClick}>{i.name}</Link></li>;
               }) }
             </ul>
-         </div>
+         </li>
        );
      }
   }

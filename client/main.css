@@ -11,18 +11,10 @@
 }
 
 html,body{
-	height:100%;
-	font-family: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	min-height: 100%;
+	font-family: 'Roboto', 'Helvetica Neue', Helvetica,Arial,sans-serif;
+	color: rgba(0, 0, 0, .87);
 }
 a:link, a:visited {
-	color: rgb(25, 124, 212);
     text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-a:active {
-    text-decoration: underline;
 }

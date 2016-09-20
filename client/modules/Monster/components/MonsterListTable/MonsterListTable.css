@@ -3,8 +3,13 @@
   padding-top: 2em;
 }
 
+.listTable th{
+  font-size: 1.2em;
+  padding-bottom: 0.5em;
+}
+
 .listTableHead {
-  background-color: #eee;
+
 }
 
 .listTableCell{

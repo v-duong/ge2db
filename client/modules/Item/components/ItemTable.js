@@ -1,9 +1,11 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
 
+import styles from '../Item.css'
+
 function ItemTable(props){
   return(
-    <table>
+    <table className={styles.itemTable}>
       <thead>
         <tr><th>Drops From</th></tr>
       </thead>

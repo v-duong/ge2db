@@ -15,7 +15,7 @@ class MonsterHit extends Component {
     var t=this;
     return (
       <div>
-            <h4>Monster Defense Values</h4>
+            <h3>Monster Defense Values</h3>
             <ul className={styles.nav}>
               <li><a className={this.state.type === 'normal' ? styles.navactive : styles.navinactive} onClick={() => t.handleClick("normal")}>Normal</a></li>
               <li><a className={this.state.type === 'broken' ? styles.navactive : styles.navinactive}  onClick={() => t.handleClick("broken")}>Broken</a></li>
@@ -25,7 +25,7 @@ class MonsterHit extends Component {
         <table className={styles.hitTable}>
           <thead>
             <tr>
-              <th></th>
+              <th className={styles.hitTablePart}></th>
               <th colSpan="2">Bullet</th>
               <th colSpan="3">Melee</th>
               <th colSpan="4">Element</th>
