@@ -53,8 +53,9 @@ export const getMonsters = state => state.monsters.data
 //export const getMonster = (state, name) => state.monster.data
 
 export const getMonster = (state, name) => state.monsters.data.filter(monster => {
-  if (monster.drops != null)
-    return monster.name === name
+  if (monster)
+    if (monster.drops != null)
+      return monster.name === name
   return false
 })[0];
 
