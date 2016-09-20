@@ -12,7 +12,12 @@ import { getMonster } from '../../MonsterReducer';
 
 class MonsterDetailPage extends Component{
   componentDidMount() {
-      this.props.dispatch(fetchMonster(this.props.params.name));
+    this.props.dispatch(fetchMonster(this.props.params.name));
+  }
+  componentWillReceiveProps(nextProps){
+    if (nextProps.params.name !== this.props.params.name) {
+      nextProps.dispatch(fetchMonster(nextProps.params.name));
+    }
   }
 
   render() {

@@ -26,7 +26,7 @@ const MonsterReducer = (state = initialState, action) => {
         }
         else {
            return {
-              data: action.monster,
+              data: [action.monster,...state.data],
             };
         }
 
