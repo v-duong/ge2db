@@ -13,17 +13,29 @@ import { getMonsters } from '../../MonsterReducer';
 
 class MonsterListPage extends Component {
   componentDidMount() {
-    if (this.props.monsters.length != 83)
-      this.props.dispatch(fetchMonsters());
+    if (this.props.monsters) {
+      if (this.props.monsters.length != 83)
+        this.props.dispatch(fetchMonsters());
+    } else {
+       this.props.dispatch(fetchMonsters());
+    }
   }
 
   render() {
-    return (
-      <div>
-        <Helmet title="Monsters" />
-        <MonsterList monsters={this.props.monsters} />
-      </div>
-    );
+  if (this.props.monsters){
+      return (
+        <div>
+          <Helmet title="Monsters" />
+          <MonsterList monsters={this.props.monsters} />
+        </div>
+      );
+  } else {
+        return (
+          <div>
+            <Helmet title="Monsters" />
+          </div>
+      );
+    }
   }
 }
 

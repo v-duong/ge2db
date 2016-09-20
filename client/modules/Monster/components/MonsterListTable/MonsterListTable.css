@@ -1,6 +1,6 @@
 .listTable {
   width: 100%;
-  padding-top: 20px;
+  padding-top: 2em;
 }
 
 .listTableHead {
@@ -8,5 +8,5 @@
 }
 
 .listTableCell{
-  padding: 3px;
+  padding: 0.4em;
 }

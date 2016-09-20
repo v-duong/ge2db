@@ -17,10 +17,10 @@ if (process.env.NODE_ENV === 'development') {
   const compiler = webpack(config);
   app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }));
   app.use(webpackHotMiddleware(compiler));
+  mongoose.set('debug', true);
 }
 
 mongoose.Promise = global.Promise;
-mongoose.set('debug', true);
 
 mongoose.connect(serverConfig.mongoURL, (error) => {
   if (error) {
@@ -128,6 +128,8 @@ app.use((req, res, next) => {
 app.listen(serverConfig.port, (error) => {
   if (!error) {
     console.log(`Server Running On ${serverConfig.port}`); // eslint-disable-line
+  } else {
+    console.log(error)
   }
 });
 

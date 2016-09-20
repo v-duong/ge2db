@@ -1,16 +1,76 @@
 .hitTable {
-  width: 50%;
-  margin: 10px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .hitTable td{
   margin: auto;
   text-align: center;
-  padding: 5px;
+  padding: 0.3em;
 }
 
 .dropTable {
   display: inline-table;
   width: 33%;
-  margin:15px auto;
+  margin:1em auto;
+}
+
+.nav {
+  list-style: none;
+  padding: 2em 0em;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav li a {
+  padding: 0.2em 1.4em;
+  border-right: 1px solid black;
+}
+.nav li .navactive {
+  font-weight: 600;
+}
+
+
+.Blaze0 {
+  background-color: rgb(253, 137, 137);
+}
+.Blaze1 {
+  background-color: rgb(251, 186, 186);
+}
+.Freeze0 {
+  background-color: rgb(131, 193, 232);
+}
+.Freeze1 {
+  background-color: rgb(171, 213, 252);
+}
+.Spark0 {
+  background-color: rgb(233, 194, 134);
+}
+.Spark1 {
+  background-color: rgb(232, 215, 173);
+}
+.God0 {
+  background-color: rgb(227, 167, 255);
+}
+.God1 {
+  background-color: rgb(234, 215, 255);
+}
+
+.critzone {
+  background-color: rgb(253, 137, 137);
+}
+.redzone {
+  background-color: rgb(251, 186, 186);
+}
+.greenzone {
+  background-color: rgb(218, 218, 218);
+}
+.grayzone {
+  background-color: rgb(195, 195, 195);
+}
+
+.x {
+  background-color: rgb(243, 243, 243);
 }
