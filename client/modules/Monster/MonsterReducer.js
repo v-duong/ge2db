@@ -6,9 +6,30 @@ const initialState = { data: [] };
 const MonsterReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_MONSTER :
-      return {
-        data: [action.monster, ...state.data],
-      };
+        // TODO: Better way to do this?
+        if (state.data != []){
+          var f = 0;
+          state.data.map(monster => {
+            if (monster.name === action.monster.name){
+              state.data[state.data.indexOf(monster)] = action.monster
+              f = 1;
+            }
+          })
+          if (f)
+            return {
+              data: state.data,
+            };
+          else
+            return {
+              data: [action.monster,...state.data],
+            };
+        }
+        else {
+           return {
+              data: action.monster,
+            };
+        }
+
 
     case ADD_MONSTERS :
       return {
@@ -28,9 +49,9 @@ export const getMonsters = state => state.monsters.data
 
 export const getMonster = (state, name) => state.monsters.data.filter(monster => {
   if (monster != null)
-    return monster.name === name
-  else
-    return {}
+    if (monster.drops != null)
+      return monster.name === name
+  return false
 })[0];
 
 

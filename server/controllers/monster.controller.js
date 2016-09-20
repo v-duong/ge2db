@@ -2,7 +2,7 @@ import Monster from '../models/monster';
 import sanitizeHtml from 'sanitize-html';
 
 export function getMonsters(req, res) {
-  Monster.find().exec((err, monsters) => {
+  Monster.find('', {'name':1, 'class':1}).exec((err, monsters) => {
     if (err) {
       res.status(500).send(err);
     }
