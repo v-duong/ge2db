@@ -19,12 +19,20 @@ if (process.env.NODE_ENV !== 'production') {
   require('./modules/Monster/pages/MonsterListPage/MonsterListPage');
   require('./modules/Monster/pages/MonsterDetailPage/MonsterDetailPage');
   require('./modules/Item/pages/ItemDetail');
+  require('./modules/App/IndexPage');
 }
 
 // react-router setup with code-splitting
 // More info: http://blog.mxstbr.com/2016/01/react-apps-with-pages/
 export default (
   <Route path="/" component={App}>
+    <IndexRoute
+      getComponent={(nextState, cb) => {
+        require.ensure([], require => {
+           cb(null, require('./modules/App/IndexPage').default);
+         });
+       }}
+     />
     <Route
       path="/monster/"
       getComponent={(nextState, cb) => {

@@ -38,9 +38,5 @@ export class App extends Component {
   }
 }
 
-// Retrieve data from store as props
-function mapStateToProps(store) {
-  return {};
-}
 
-export default connect(mapStateToProps)(App);
+export default connect()(App);

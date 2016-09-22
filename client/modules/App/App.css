@@ -17,3 +17,6 @@
 .app a:hover {
   text-decoration: underline;
 }
+.circles {
+  padding-left: 2em;
+}
