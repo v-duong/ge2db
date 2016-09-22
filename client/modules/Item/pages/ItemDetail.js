@@ -26,6 +26,7 @@ class ItemDetail extends Component{
         <div>
           <Helmet title={this.props.params.name} />
           <h1>{this.props.params.name}</h1>
+          <h3>Drops From</h3>
           <ItemTable item={this.props.item}/>
         </div>
       );

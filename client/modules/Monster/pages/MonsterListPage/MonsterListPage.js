@@ -22,7 +22,7 @@ class MonsterListPage extends Component {
   }
 
   render() {
-  if (this.props.monsters.length == 83){
+  if (this.props.monsters && this.props.monsters.length == 83){
       return (
         <div>
           <Helmet title="Monsters" />

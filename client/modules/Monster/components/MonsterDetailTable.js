@@ -2,11 +2,15 @@ import React, { PropTypes } from 'react';
 
 import MonsterDetailTableDrop from './MonsterDetailTable/MonsterDetailTableDrop'
 import MonsterHit from './MonsterDetailTable/MonsterHit'
+import MonsterBreakTable from './MonsterDetailTable/MonsterBreakTable'
 
 
 import styles from './MonsterDetail.css'
 
 function MonsterDetailTable(props) {
+  var breaks = ""
+  if (props.monster && props.monster.breaks)
+    breaks = <MonsterBreakTable breaks={props.monster.breaks}/>
   return (
     <div className="listView">
       <MonsterHit monster={props.monster}/>
@@ -14,6 +18,7 @@ function MonsterDetailTable(props) {
         drops={props.monster.drops}
         key="items"
       />
+    {breaks}
     </div>
   );
 }

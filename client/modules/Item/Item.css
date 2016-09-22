@@ -1,3 +1,6 @@
-.itemTable th{
-  padding-bottom: 0.3em;
+.itemTable td{
+  padding-bottom: 0.5em;
+  padding-right:1em;
+}
+.itemTable {
 }

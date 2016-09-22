@@ -2,6 +2,10 @@ h1 {
   font-size:2.3em;
 }
 
+h3 {
+  margin-top:1em;
+}
+
 
 .hitTable {
   width: 100%;
@@ -26,6 +30,7 @@ h1 {
   display: inline-table;
   width: 33%;
   margin:1em auto;
+  border-spacing: 0em 0.2em;
 }
 .dropTable th{
   padding-bottom: 0.3em;
@@ -43,9 +48,14 @@ h1 {
 .nav li a {
   padding: 0.2em 1.4em;
   border-right: 1px solid black;
+  cursor: pointer;
 }
 .nav li .navactive {
   font-weight: 600;
+}
+
+.tline {
+  border-bottom: 1px solid #ccc;
 }
 
 
