@@ -20,3 +20,25 @@
 .circles {
   padding-left: 2em;
 }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+.app {
+    max-width: 85%;
+};
+}
+
+@media only screen and (min-device-width : 480px) and (max-device-width : 768px) {
+
+.app {
+    max-width: 85%;
+};
+
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+  .app {
+      max-width: 85%;
+  }
+
+};
