@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 import MonsterDetailTableDrop from './MonsterDetailTable/MonsterDetailTableDrop'
 import MonsterHit from './MonsterDetailTable/MonsterHit'
 import MonsterBreakTable from './MonsterDetailTable/MonsterBreakTable'
-
+import MonsterStatus from './MonsterDetailTable/MonsterStatus'
 
 import styles from './MonsterDetail.css'
 
@@ -14,6 +14,7 @@ function MonsterDetailTable(props) {
   return (
     <div className="listView">
       <MonsterHit monster={props.monster}/>
+      <MonsterStatus status={props.monster.status}/>
       <MonsterDetailTableDrop
         drops={props.monster.drops}
         key="items"
