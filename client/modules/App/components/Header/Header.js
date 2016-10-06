@@ -17,6 +17,11 @@ export function Header(props, context) {
           </h1>
           <ul className={styles.navlist}>
             <li className={styles.navlistitem}>
+              <p className={styles.navlink}>
+                <Link to="/info/" className={styles.navlistitemlink}>Info</Link>
+              </p>
+            </li>
+            <li className={styles.navlistitem}>
             <p className={styles.navlink}>
               <Link to="/monster/" className={styles.navlistitemlink}>monsters</Link>
             </p>

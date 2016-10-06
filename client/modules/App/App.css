@@ -20,6 +20,22 @@
 .circles {
   padding-left: 2em;
 }
+.itable{
+  border-spacing: 0;
+}
+.itable tbody td{
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  min-width: 3em;
+  padding: 0.25em;
+}
+h3 {
+  margin-top:1em;
+  font-size: 1.3em;
+}
+h4 {
+  margin-top:1em;
+  font-size: 1.1em;
+}
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
