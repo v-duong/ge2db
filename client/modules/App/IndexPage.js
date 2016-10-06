@@ -12,10 +12,7 @@ export function IndexPage(props) {
       <br/><br/>
       <p>Recent Updates: </p>
         <ul className={styles.circles}>
-          <li>Items with duplicate names have now been split.
-          (e.g. <Link to="/item/Avian Span (1)">Avian Span (1)</Link> and <Link to="/item/Avian Span (2)">Avian Span (2)</Link>)</li>
-          <li>Added monster break drops.</li>
-          <li>Item pages now show more detail about where it drops from.</li>
+          <li>Added page for general damage information.</li>
         </ul>
     </div>
   );

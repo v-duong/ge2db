@@ -5,6 +5,7 @@ import styles from './App.css';
 
 
 function GeneralInfo(props) {
+  //holy text blocks batman
   return (
       <div>
         <h3>Defense Tables</h3>
@@ -55,7 +56,7 @@ function GeneralInfo(props) {
         </table>
         <h3>Damage Formula</h3>
         <p>May not be entirely accurate due to either unknown factors or floating point rounding.</p>
-        <p>Base Attack * Attack Modifiers * Damage Multipliers * Attack Value * ((100 - Target Defense Value) / 100)</p>
+        <p>Base Attack * (1 + Attack Modifiers) * Damage Multipliers * Attack Value * ((100 - Target Defense Value) / 100)</p>
         <h4>Attack Modifiers</h4>
         <p>Skills or statuses that boost your weapon attack. Stacks additively.</p>
         <table className={styles.itable}>
